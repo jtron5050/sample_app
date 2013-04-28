@@ -1,6 +1,15 @@
 @import "bootstrap";
 
+/* variables and mixins */
+
 $grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 
 /* universal */
 
@@ -72,6 +81,39 @@ p {
 
 
 
+/* Sidebar users page */
+aside {
+  section {
+    padding: 10px;
+    border-top: 1px solid $grayLighter;
+
+    &:firstchild {
+      border: 0;
+      padding-top: 0;
+
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0;
+
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+
 /* Footer */
 
 footer {
@@ -104,6 +146,27 @@ footer {
   }
 }
 
+/* Forms */
+input, textarea, select .uneditable-input {
+  //@include box_sizing;
+  margin-bottom: 15px;
+  padding: 10px;
+}
 
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+
+/* Debug box */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
 
 
