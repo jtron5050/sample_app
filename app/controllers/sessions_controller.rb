@@ -1,12 +1,4 @@
 class SessionsController < ApplicationController
-  protect_from_forgery
-  include SessionsHelper
-
-  #forct signout to prevent CSRF attacks
-  def handle_unverified_request
-    sign_out
-    super
-  end
 
   def new
   end
@@ -24,6 +16,7 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-
+    sign_out
+    redirect_to root_url
   end
 end
