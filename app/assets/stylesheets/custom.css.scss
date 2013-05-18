@@ -96,7 +96,7 @@ p {
 }
 
 
-/* Sidebar users page */
+/* Sidebar users */
 aside {
   section {
     padding: 10px;
@@ -153,18 +153,16 @@ aside {
   .gravatar {
     float: left;
     margin-right: 10px;
-
   }
+}
 
   aside {
     textarea {
+      width: 260px;
       height: 100px;
       margin-bottom: 5px;
     }
-
   }
-
-}
 
 
 
